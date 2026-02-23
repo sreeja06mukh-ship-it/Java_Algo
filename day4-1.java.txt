@@ -1,0 +1,34 @@
+// Abstract class
+abstract class day4-1 {
+    int rollno;
+    long regno;
+
+    // Method to take input
+    void getinput(int r, long reg) {
+        rollno = r;
+        regno = reg;
+    }
+
+    // Abstract method
+    abstract void course();
+}
+
+// Subclass
+class kiitian extends student {
+    @Override
+    void course() {
+        System.out.println("Course - B.Tech. (Computer Science & Engg)");
+    }
+}
+
+// Driver class
+public class Main {
+    public static void main(String[] args) {
+        kiitian obj = new kiitian();
+        obj.getinput(2205180, 1234567890L);
+
+        System.out.println("Rollno - " + obj.rollno);
+        System.out.println("Registration no - " + obj.regno);
+        obj.course();
+    }
+}
